@@ -1,0 +1,38 @@
+
+<div class="parent"> 
+    <div class="container" [ngClass]="isSignDivVisiable ? 'active' :'' " id="container">
+        <div class="form-container sign-up" >
+            <form #formulario="ngForm" (ngSubmit)="onRegister()" action="#" method="POST">
+                <h1>Crear cuenta</h1>                                
+                <input type="text" name="name" [(ngModel)]="nombreUsuario" placeholder="Name">
+                <input type="email" name="email" [(ngModel)]="emailUsuario" placeholder="Email">
+                <input type="password" name="password"  [(ngModel)]="clave" placeholder="Password">
+                <button>Crear Cuenta</button>
+            </form>
+        </div>
+        <div class="form-container sign-in" >
+            <form #formulario="ngForm" (ngSubmit)="login()" action="#" method="POST">
+                <h1>Iniciar sesión</h1>                              
+                <input type="email" name="email" value="" [(ngModel)]="nombreUsuario" type="text" autocomplete="email" required>
+                <input type="password" name="password" value="" [(ngModel)]="clave" type="password" autocomplete="current-password" required>
+                <a href="#">→ ¿Has olvidado la contraseña? ←</a>
+                <button>Iniciar sesión</button>
+            </form>
+        </div>
+        <div class="toggle-container">
+            <div class="toggle">
+                <div class="toggle-panel toggle-left">
+                    <h1>Bienvenido</h1>
+                    <p>Crea una cuenta para iniciar sesión en el sistema</p>
+                    <button type="button" class="hidden" id="login" (click)="isSignDivVisiable = false">Iniciar sesión</button>
+                </div>
+                <div class="toggle-panel toggle-right">
+                    <h1>Centro de Salud</h1>
+                    <p>Ingresa tus credenciales para iniciar sesión en la aplicación</p>
+                    <button type="button" class="hidden" id="register" (click)="isSignDivVisiable = true">Crear cuenta</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

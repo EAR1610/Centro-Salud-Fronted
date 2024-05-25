@@ -1,0 +1,33 @@
+<div class="container" style="margin-top: 40px; width: 50%; margin-left: auto; margin-right: auto;">
+    <h3>Editar Paciente</h3>
+    <form (ngSubmit)="editarPaciente()">
+      <div class="form-group">
+        <label for="nombre">Nombre</label>
+        <input type="text" class="form-control" id="nombre" [(ngModel)]="paciente.nombre" name="nombre" required>
+      </div>
+      <div class="form-group">
+        <label for="apellido">Apellido</label>
+        <input type="text" class="form-control" id="apellido" [(ngModel)]="paciente.apellido" name="apellido" required>
+      </div>
+      <div class="form-group">
+        <label for="fechaNacimiento">Fecha de Nacimiento</label>
+        <input type="date" class="form-control" id="fechaNacimiento" [(ngModel)]="paciente.fechaNacimiento" name="fechaNacimiento" required>
+      </div>
+      <div class="form-group">
+        <label for="direccion">Dirección</label>
+        <input type="text" class="form-control" id="direccion" [(ngModel)]="paciente.direccion" name="direccion" required>
+      </div>
+      <div class="form-group">
+        <label for="telefono">Teléfono</label>
+        <input type="text" class="form-control" id="telefono" [(ngModel)]="paciente.telefono" name="telefono" required>
+      </div>
+      <div class="form-group">
+        <label for="municipioId">Municipio</label>
+        <select class="form-control" id="municipioId" [(ngModel)]="paciente.municipioId" name="municipioId" required>
+          <option *ngFor="let municipio of municipios" [value]="municipio.id">{{ municipio.nombre }}</option>
+        </select>
+      </div>
+      <button type="submit" class="btn btn-primary" style="margin-top: 20px;">Guardar Cambios</button>
+    </form>
+  </div>
+  
