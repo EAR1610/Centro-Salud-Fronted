@@ -15,6 +15,7 @@ import { PacienteEditarComponent } from './components/paciente/paciente-editar.c
 import { MedicoComponent } from './components/medico/medico.component';
 import { VacunaComponent } from './components/vacuna/vacuna.component';
 import { UsuarioComponent } from './components/usuario/usuario.component';
+import { NuevoUsuarioComponent } from './components/usuario/nuevo-usuario.component';
 
 const routes: Routes = [
   { path:'', redirectTo : 'login', pathMatch:'full' },
@@ -39,6 +40,7 @@ const routes: Routes = [
       { path: 'medico', component: MedicoComponent },
       { path: 'vacuna', component: VacunaComponent },
       { path: 'usuario', component: UsuarioComponent },      
+      { path: 'nuevo-usuario', component: NuevoUsuarioComponent },
     ]
   }
 ];

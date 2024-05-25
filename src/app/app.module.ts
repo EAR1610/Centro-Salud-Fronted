@@ -25,6 +25,8 @@ import { AuthInterceptor } from './interceptor/AuthInterceptor';
 import { MedicoComponent } from './components/medico/medico.component';
 import { VacunaComponent } from './components/vacuna/vacuna.component';
 import { UsuarioComponent } from './components/usuario/usuario.component';
+import { EditarUsuarioComponent } from './components/usuario/editar-usuario.component';
+import { NuevoUsuarioComponent } from './components/usuario/nuevo-usuario.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +43,9 @@ import { UsuarioComponent } from './components/usuario/usuario.component';
     PacienteEditarComponent,
     MedicoComponent,
     VacunaComponent,
-    UsuarioComponent,    
+    UsuarioComponent,
+    EditarUsuarioComponent,
+    NuevoUsuarioComponent,    
   ],
   imports: [
     BrowserModule,
@@ -54,7 +58,6 @@ import { UsuarioComponent } from './components/usuario/usuario.component';
     TableModule,
     CommonModule,
     FormsModule
-  
   ],
   providers: [],
   bootstrap: [AppComponent]
