@@ -1,0 +1,35 @@
+<div class="container">
+    <h2>Citas</h2>
+    <button type="button" routerLink="/nueva-cita" class="btn btn-primary" style="margin-top: 20px;">Agregar Cita</button>
+    <div class="container-table">
+      <table class="table table-striped" style="margin-top: 20px;">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Paciente</th>
+            <th>Médico</th>
+            <th>Fecha</th>
+            <th>Hora</th>
+            <th>Estado</th>
+            <th>Descripción</th>
+            <th>Editar</th>
+            <th>Borrar</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let cita of cita">
+            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-black">{{ cita.id }}</td>
+            <td class="px-6 py-4 whitespace-nowrap text-sm text-black">{{ cita.paciente.nombre }}</td>
+            <td class="px-6 py-4 whitespace-nowrap text-sm text-black">{{ cita.doctor.nombre }}</td>
+            <td class="px-6 py-4 whitespace-nowrap text-sm text-black">{{ cita.fechaHora }}</td>
+            <td class="px-6 py-4 whitespace-nowrap text-sm text-black">{{ cita.fechaRegistro }}</td>
+            <td class="px-6 py-4 whitespace-nowrap text-sm text-black">{{ cita.estado }}</td>
+            <td class="px-6 py-4 whitespace-nowrap text-sm text-black">{{ cita.observaciones }}</td>
+            <td><button class="btn btn-outline-warning" routerLink="/editar-cita/{{cita.id}}"><i class="far fa-edit"></i> Editar</button></td>
+            <td><button class="btn btn-outline-danger" (click)="eliminarCita(cita.id)"><i class="far fa-trash-alt"></i> Eliminar</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  

@@ -1,70 +1,36 @@
-<!-- <div class="container">
-    <h2>Pacientes</h2>
-    <button type="button" routerLink="/nuevo-paciente" class="btn btn-primary" style="margin-top: 20px;">Agregar Paciente</button>
-    <div class="container-table">
-      <table class="table table-striped" style="margin-top: 20px;">
-        <thead>
-          <tr>
-            <th>ID</th>
-            <th>Nombre</th>
-            <th>Apellido</th>
-            <th>Fecha de Nacimiento</th>
-            <th>Dirección</th>
-            <th>Teléfono</th>
-            <th>Municipio</th>
-            <th>Editar</th>
-            <th>Borrar</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr *ngFor="let paciente of paciente">
-            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-black">{{ paciente.id }}</td>
-            <td class="px-6 py-4 whitespace-nowrap text-sm text-black">{{ paciente.nombre }}</td>
-            <td class="px-6 py-4 whitespace-nowrap text-sm text-black">{{ paciente.apellido }}</td>
-            <td class="px-6 py-4 whitespace-nowrap text-sm text-black">{{ paciente.fechaNacimiento }}</td>
-            <td class="px-6 py-4 whitespace-nowrap text-sm text-black">{{ paciente.direccion }}</td>
-            <td class="px-6 py-4 whitespace-nowrap text-sm text-black">{{ paciente.telefono }}</td>
-            <td class="px-6 py-4 whitespace-nowrap text-sm text-black">{{ paciente.municipio.nombre }}</td>
-            <td><button class="btn btn-outline-warning" routerLink="/editar-paciente/{{paciente.id}}"><i class="far fa-edit"></i> Editar</button></td>
-            <td><button class="btn btn-outline-danger" (click)="eliminarPaciente(paciente.id)"><i class="far fa-trash-alt"></i> Eliminar</button></td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+<div class="container">
+  <h2>Pacientes</h2>
+  <button type="button" routerLink="/nuevo-paciente" class="btn btn-primary" style="margin-top: 20px;">Agregar
+    Paciente</button>
+  <div class="container-table">
+    <table class="table table-striped" style="margin-top: 20px;">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Nombre</th>
+          <th>Apellido</th>
+          <th>Fecha de Nacimiento</th>
+          <th>Dirección</th>
+          <th>Teléfono</th>
+          <th>Municipio</th>
+          <th>Editar</th>
+          <th>Borrar</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let paciente of paciente">
+          <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-black">{{ paciente.id }}</td>
+          <td class="px-6 py-4 whitespace-nowrap text-sm text-black">{{ paciente.nombre }}</td>
+          <td class="px-6 py-4 whitespace-nowrap text-sm text-black">{{ paciente.apellido }}</td>
+          <td class="px-6 py-4 whitespace-nowrap text-sm text-black">{{ paciente.fechaNacimiento }}</td>
+          <td class="px-6 py-4 whitespace-nowrap text-sm text-black">{{ paciente.direccion }}</td>
+          <td class="px-6 py-4 whitespace-nowrap text-sm text-black">{{ paciente.telefono }}</td>
+          <td class="px-6 py-4 whitespace-nowrap text-sm text-black">{{ paciente.municipio.nombre }}</td>
+          <td><button class="btn btn-outline-warning" routerLink="/editar-paciente/{{paciente.id}}"><i
+                class="far fa-edit"></i> Editar</button></td>
+          <td><button class="btn btn-outline-danger" (click)="eliminarPaciente(paciente.id)"><i
+                class="far fa-trash-alt"></i> Eliminar</button></td>
+        </tr>
+      </tbody>
+    </table>
   </div>
-   -->
-<app-navbar></app-navbar>
-   <div class="container">
-    <h2>Pacientes</h2>
-    <button type="button" routerLink="/nuevo-paciente" class="btn btn-primary" style="margin-top: 20px;">Agregar Paciente</button>
-    <div class="container-table">
-      <table class="table table-striped" style="margin-top: 20px;">
-        <thead>
-          <tr>
-            <th>ID</th>
-            <th>Nombre</th>
-            <th>Apellido</th>
-            <th>Fecha de Nacimiento</th>
-            <th>Dirección</th>
-            <th>Teléfono</th>
-            <th>Municipio</th>
-            <th>Editar</th>
-            <th>Borrar</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr *ngFor="let paciente of paciente">
-            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-black">{{ paciente.id }}</td>
-            <td class="px-6 py-4 whitespace-nowrap text-sm text-black">{{ paciente.nombre }}</td>
-            <td class="px-6 py-4 whitespace-nowrap text-sm text-black">{{ paciente.apellido }}</td>
-            <td class="px-6 py-4 whitespace-nowrap text-sm text-black">{{ paciente.fechaNacimiento }}</td>
-            <td class="px-6 py-4 whitespace-nowrap text-sm text-black">{{ paciente.direccion }}</td>
-            <td class="px-6 py-4 whitespace-nowrap text-sm text-black">{{ paciente.telefono }}</td>
-            <td class="px-6 py-4 whitespace-nowrap text-sm text-black">{{ paciente.municipio.nombre }}</td>
-            <td><button class="btn btn-outline-warning" routerLink="/editar-paciente/{{paciente.id}}"><i class="far fa-edit"></i> Editar</button></td>
-            <td><button class="btn btn-outline-danger" (click)="eliminarPaciente(paciente.id)"><i class="far fa-trash-alt"></i> Eliminar</button></td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  
