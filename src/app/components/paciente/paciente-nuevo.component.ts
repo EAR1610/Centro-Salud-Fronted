@@ -4,6 +4,7 @@ import { PacienteService } from '../../Service/paciente.service';
 import { MunicipioServiceService } from '../../Service/municipio.service.service';
 import { Municipio } from '../../models/Municipio';
 import { Router } from '@angular/router';
+import Swal from 'sweetalert2'
 
 @Component({
   selector: 'app-paciente-nuevo',
@@ -37,7 +38,7 @@ export class PacienteNuevoComponent {
       paciente => {
         this.paciente.push(paciente);
         this.nuevoPaciente = new Paciente(0, '', '', '', '', '', 0, { id: 0, nombre: '' });
-        console.log('Nuevo paciente agregado:', paciente);
+        Swal.fire("Paciente creado correctamente");
       }
     );
   }
@@ -47,7 +48,6 @@ export class PacienteNuevoComponent {
     this.municipioService.listarMunicipip().subscribe(
       data => {
         this.municipios = data;
-        console.log(data);
       }
     );
   }

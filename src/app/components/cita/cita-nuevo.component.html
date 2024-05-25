@@ -1,0 +1,37 @@
+
+<div class="container">
+    <h2>Nueva Cita</h2>
+    <form (ngSubmit)="guardarCita()">
+        <div class="form-group">
+            <label for="pacienteId">Paciente:</label>
+            <select class="form-control" id="pacienteId" [(ngModel)]="cita.pacienteId" name="pacienteId" required>
+                <option *ngFor="let p of paciente" [value]="p.id">{{p.nombre}}</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="medicoId">Doctor:</label>
+            <select class="form-control" id="medicoId" [(ngModel)]="cita.doctorId" name="medicoId" required>
+                <option *ngFor="let d of doctor" [value]="d.id">{{d.nombre}}</option>
+            </select>
+        </div>
+      <div class="form-group">
+        <label for="fechaHora">Fecha y Hora:</label>
+        <input type="datetime-local" class="form-control" id="fechaHora" [(ngModel)]="cita.fechaHora" name="fechaHora" required>
+      </div>
+      <div class="form-group">
+        <label for="fechaRegistro">Fecha de Registro:</label>
+        <input type="datetime-local" class="form-control" id="fechaRegistro" [(ngModel)]="cita.fechaRegistro" name="fechaRegistro" required>
+      </div>
+      <div class="form-group">
+        <label for="observaciones">Observaciones:</label>
+        <textarea class="form-control" id="observaciones" [(ngModel)]="cita.observaciones" name="observaciones"></textarea>
+      </div>
+      <div class="form-group form-check">
+        <input type="checkbox" class="form-check-input" id="estado" [(ngModel)]="cita.estado" name="estado">
+        <label class="form-check-label" for="estado">Estado</label>
+      </div>
+      <button type="submit" class="btn btn-primary w-100">Guardar Cita</button>
+      <button type="button" routerLink="/citas" class="btn btn-outline-secondary w-100 mt-3">Regresar</button>
+    </form>
+  </div>
+  

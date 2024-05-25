@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './pages/login/login.component';
 import { LayoutComponent } from './pages/layout/layout.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
-import { FormsModule } from '@angular/forms';
 import { PaginiComponent } from './Pag_ini/pagini/pagini.component';
 import { MunicipioComponent } from './components/municipio/municipio.component';
 import { NuevoMunicipioComponent } from './components/municipio/nuevo-municipio.component';
@@ -27,6 +27,8 @@ import { VacunaComponent } from './components/vacuna/vacuna.component';
 import { UsuarioComponent } from './components/usuario/usuario.component';
 import { EditarUsuarioComponent } from './components/usuario/editar-usuario.component';
 import { NuevoUsuarioComponent } from './components/usuario/nuevo-usuario.component';
+import { CitaComponent } from './components/cita/cita.component';
+import { CitaNuevoComponent } from './components/cita/cita-nuevo.component';
 
 @NgModule({
   declarations: [
@@ -44,8 +46,10 @@ import { NuevoUsuarioComponent } from './components/usuario/nuevo-usuario.compon
     MedicoComponent,
     VacunaComponent,
     UsuarioComponent,
+    NuevoUsuarioComponent,
     EditarUsuarioComponent,
-    NuevoUsuarioComponent,    
+    CitaComponent,
+    CitaNuevoComponent,    
   ],
   imports: [
     BrowserModule,

@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Municipio } from '../../models/Municipio';
 import { MunicipioServiceService } from '../../Service/municipio.service.service';
 import { Router } from '@angular/router';
+import Swal from 'sweetalert2'
 
 @Component({
   selector: 'app-nuevo-municipio',
@@ -31,7 +32,7 @@ export class NuevoMunicipioComponent {
   guardarMunicipio(): void {
     this.municipioService.nuevoMunicipio(this.municipio).subscribe(
       data => {
-        console.log(data);
+        Swal.fire("Municipio creado correctamente");
         this.router.navigate(['/municipio']);
       }
     );

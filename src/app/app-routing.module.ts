@@ -16,6 +16,10 @@ import { MedicoComponent } from './components/medico/medico.component';
 import { VacunaComponent } from './components/vacuna/vacuna.component';
 import { UsuarioComponent } from './components/usuario/usuario.component';
 import { NuevoUsuarioComponent } from './components/usuario/nuevo-usuario.component';
+import { EditarUsuarioComponent } from './components/usuario/editar-usuario.component';
+
+import { CitaComponent } from './components/cita/cita.component';
+import { CitaNuevoComponent } from './components/cita/cita-nuevo.component';
 
 const routes: Routes = [
   { path:'', redirectTo : 'login', pathMatch:'full' },
@@ -39,8 +43,13 @@ const routes: Routes = [
 
       { path: 'medico', component: MedicoComponent },
       { path: 'vacuna', component: VacunaComponent },
+      { path: 'usuario', component: UsuarioComponent },
+      
+      { path: 'citas', component: CitaComponent },
+      { path: 'nueva-cita', component: CitaNuevoComponent },
       { path: 'usuario', component: UsuarioComponent },      
       { path: 'nuevo-usuario', component: NuevoUsuarioComponent },
+      { path: 'editar-usuario/:id', component: EditarUsuarioComponent },
     ]
   }
 ];

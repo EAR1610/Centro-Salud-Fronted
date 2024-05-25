@@ -36,7 +36,7 @@ export class PacienteEditarComponent {
       this.router.navigate(['/login']);
     }
     this.listarMunicipios();
-    // this.cargarPaciente();
+    this.obtenerPaciente();
   }
 
   listarMunicipios(): void {
@@ -50,6 +50,7 @@ export class PacienteEditarComponent {
       }
     );
   }
+
    // Editar Paciente
    editarPaciente(): void {
     const id = this.activatedRoute.snapshot.params['id'];
@@ -70,6 +71,15 @@ export class PacienteEditarComponent {
     } else {
       alert('ID de paciente inválido o municipioId no es un número válido.');
     }
+  }
+
+  obtenerPaciente(): void {
+    const id = this.activatedRoute.snapshot.params['id'];
+    this.pacienteService.obtenerPaciente(id).subscribe(
+      data => {
+        this.paciente = data;
+      }
+    );
   }
 
 }

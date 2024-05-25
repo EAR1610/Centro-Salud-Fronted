@@ -36,4 +36,9 @@ export class PacienteService {
   eliminarPaciente(id: number): Observable<any> {
     return this.httpClient.delete(this.url + '/' + id);
   }
+
+  //Obtener Paciente
+  obtenerPaciente(id: number): Observable<Paciente> {
+    return this.httpClient.get<Paciente>(this.url + '/' + id);
+  }
 }

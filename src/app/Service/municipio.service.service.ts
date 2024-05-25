@@ -39,5 +39,12 @@ export class MunicipioServiceService {
       // catchError(this.handleError)
     );
   }
+
+  //Obtener Municipio
+  obtenerMunicipio(id: number): Observable<Municipio> {
+    return this.httpClient.get<Municipio>(this.muncipioUrl + '/' + id).pipe(
+      // catchError(this.handleError)
+    );
+  }
   
 }

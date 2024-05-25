@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Municipio } from '../../models/Municipio';
 import { MunicipioServiceService } from '../../Service/municipio.service.service';
 import { Router } from '@angular/router';
+import Swal from 'sweetalert2'
 
 @Component({
   selector: 'app-municipio',
@@ -38,7 +39,7 @@ export class MunicipioComponent {
   eliminarMunicipio(id: number): void {
     this.municipioService.eliminarMunicipio(id).subscribe(
       data => {
-        console.log(data);
+        Swal.fire("Municipio eliminado correctamente");
         this.listarMunicipios();
       }
     );

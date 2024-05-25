@@ -1,6 +1,11 @@
 import {
   TimesIcon
-} from "./chunk-K5MF46AA.js";
+} from "./chunk-YM4LE4ST.js";
+import {
+  DomHandler,
+  Ripple,
+  RippleModule
+} from "./chunk-ZUXXLFA3.js";
 import {
   animate,
   animation,
@@ -8,18 +13,13 @@ import {
   transition,
   trigger,
   useAnimation
-} from "./chunk-LBXE3ERS.js";
-import {
-  DomHandler,
-  Ripple,
-  RippleModule
-} from "./chunk-E6TRGH77.js";
+} from "./chunk-56UQNUCS.js";
 import {
   PrimeNGConfig,
   PrimeTemplate,
   SharedModule,
   zindexutils
-} from "./chunk-KKOUUP3O.js";
+} from "./chunk-ICZYJQP6.js";
 import {
   CommonModule,
   DOCUMENT,
@@ -27,7 +27,7 @@ import {
   NgIf,
   NgStyle,
   NgTemplateOutlet
-} from "./chunk-YB7WXP4O.js";
+} from "./chunk-DOVGYWUU.js";
 import {
   ChangeDetectionStrategy,
   ChangeDetectorRef,
@@ -76,7 +76,8 @@ import {
   ɵɵrestoreView,
   ɵɵtemplate,
   ɵɵtemplateRefExtractor
-} from "./chunk-5YL2E2YL.js";
+} from "./chunk-Q5Z3DEOE.js";
+import "./chunk-WKYGNSYM.js";
 
 // node_modules/primeng/fesm2022/primeng-sidebar.mjs
 var _c0 = ["*"];

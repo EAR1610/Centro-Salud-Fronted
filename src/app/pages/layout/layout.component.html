@@ -2,12 +2,9 @@
 
   <nav class="site-nav">
     <div class="name"> Centro de Salud </div>
-    <div class="mb-2">
-      <span class="mr-5">Hola: {{nombreUsuario}}</span>
-      <button (click)='onLogout()'>Cerrar sesión</button>      
-    </div>
+    <span class="text-center">Hola: {{nombreUsuario}}</span>
     <ul>
-      <li class="active"><a [routerLink]="['/dashboard']">Citas</a>
+      <li class="active"><a [routerLink]="['/citas']">Citas</a>
         <ul>
           <li><a>Mis citas</a></li>
         </ul>
@@ -17,6 +14,7 @@
       <li><a [routerLink]="['/municipio']">Municipio</a></li>
       <li><a [routerLink]="['/medico']">Medico</a></li>
       <li><a [routerLink]="['/vacuna']">Vacunas</a></li>      
+      <button (click)='onLogout()' class="btn btn-primary">Cerrar sesión</button>    
     </ul>    
   </nav>
 

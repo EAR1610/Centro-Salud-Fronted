@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Usuario } from '../../models/Usuario';
 import { Router } from '@angular/router';
 import { UsuarioService } from '../../Service/usuario.service';
+import Swal from 'sweetalert2'
 
 @Component({
   selector: 'app-nuevo-usuario',
@@ -22,14 +23,15 @@ export class NuevoUsuarioComponent {
       this.router.navigate(['/login']);
     }    
   }
-
+  
   // Agregar Usuario
   agregarUsuario(): void {
     this.usuarioService.nuevoUsuario(this.nuevoUsuario).subscribe(
       usuario => {
         this.usuario.push(usuario);
-        this.nuevoUsuario = new Usuario(0, '', '', '', '', '', '');
-        console.log('Nuevo usuario agregado:', usuario);
+        this.nuevoUsuario = new Usuario(0, '', '', '', '', '', '');        
+        Swal.fire("Usuario creado correctamente");
+        this.router.navigate(['/usuario']);
       }
     );
   }

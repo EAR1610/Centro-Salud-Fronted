@@ -1,7 +1,10 @@
 
 <div class="container">
   <h2>Usuarios</h2>
-  <button type="button" routerLink="/nuevo-usuario" class="btn btn-primary" style="margin-top: 20px;">Agregar Usuario</button>
+  <div style="display: flex; align-items: center; justify-content: space-between;">
+    <span>Aquí encontraras los usuarios registrados en el sistema</span>
+    <button type="button" routerLink="/nuevo-usuario" class="btn btn-primary" style="margin-top: 20px;">Agregar Usuario</button>
+  </div>
   <div class="container-table">
     <table class="table table-striped" style="margin-top: 20px;">
       <thead>
@@ -11,7 +14,6 @@
           <th>Apellido</th>
           <th>Teléfono</th>
           <th>Dirección</th>
-          <th>Rol</th>
           <th>Editar</th>
           <th>Borrar</th>
         </tr>
@@ -22,7 +24,6 @@
           <td class="px-6 py-4 whitespace-nowrap text-sm text-black">{{ usuario.nombre }}</td>
           <td class="px-6 py-4 whitespace-nowrap text-sm text-black">{{ usuario.apellido }}</td>
           <td class="px-6 py-4 whitespace-nowrap text-sm text-black">{{ usuario.telefono }}</td>
-          <td class="px-6 py-4 whitespace-nowrap text-sm text-black">{{ usuario.direccion }}</td>
           <td class="px-6 py-4 whitespace-nowrap text-sm text-black">{{ usuario.direccion }}</td>
           <td><button class="btn btn-outline-warning" routerLink="/editar-usuario/{{usuario.id}}"><i class="far fa-edit"></i> Editar</button></td>
           <td><button class="btn btn-outline-danger" (click)="eliminarUsuario(usuario.id)"><i class="far fa-trash-alt"></i> Eliminar</button></td>

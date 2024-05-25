@@ -1,39 +1,34 @@
+import { Especialidad } from "./Especialidad";
+import { Medico } from "./Medico";
+import { Paciente } from "./Paciente";
+
 export class Cita {
     id: number;
     pacienteId: number;
-    medicoId: number;
-    especialidadId: number;
-    fecha: string;
-    hora: string;
-    descripcion: string;
+    doctorId: number;
+    usuarioId: number;
+    fechaHora: string;
+    fechaRegistro: string;
+    observaciones: string;
     estado: boolean;
-    paciente: {
-        id: number;
-        nombre: string;
-        apellido: string;
-    };
-    medico: {
-        id: number;
-        nombre: string;
-        apellido: string;
-    };
-    especialidad: {
-        id: number;
-        nombre: string;
-        estado: boolean;
-    }
+    especialidadId?: number; // add this line
+    paciente?: Paciente; // add this line
+    doctor?: Medico; // add this line
+    especialidad?: Especialidad; // add this line
 
-    constructor(id: number, pacienteId: number, medicoId: number, fecha: string, hora: string, descripcion: string, estado: boolean, paciente: { id: number; nombre: string; apellido: string; }, medico: { id: number; nombre: string; apellido: string; }, especialidadId: number, especialidad: { id: number; nombre: string; estado: boolean; }) {
+    //Constructor
+    constructor(id: number, pacienteId: number, doctorId: number, usuarioId: number, fechaHora: string, fechaRegistro: string, observaciones: string, estado: boolean, especialidadId: number, paciente: Paciente, doctor: Medico, especialidad: Especialidad) {
         this.id = id;
         this.pacienteId = pacienteId;
-        this.medicoId = medicoId;
-        this.especialidadId = especialidadId;
-        this.fecha = fecha;
-        this.hora = hora;
-        this.descripcion = descripcion;
+        this.doctorId = doctorId;
+        this.usuarioId = usuarioId;
+        this.fechaHora = fechaHora;
+        this.fechaRegistro = fechaRegistro;
+        this.observaciones = observaciones;
         this.estado = estado;
+        this.especialidadId = especialidadId;
         this.paciente = paciente;
-        this.medico = medico;
+        this.doctor = doctor;
         this.especialidad = especialidad;
     }
 }
