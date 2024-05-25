@@ -25,6 +25,8 @@ import { AuthInterceptor } from './interceptor/AuthInterceptor';
 import { MedicoComponent } from './components/medico/medico.component';
 import { VacunaComponent } from './components/vacuna/vacuna.component';
 import { UsuarioComponent } from './components/usuario/usuario.component';
+import { CitaComponent } from './components/cita/cita.component';
+import { CitaNuevoComponent } from './components/cita/cita-nuevo.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +43,9 @@ import { UsuarioComponent } from './components/usuario/usuario.component';
     PacienteEditarComponent,
     MedicoComponent,
     VacunaComponent,
-    UsuarioComponent,    
+    UsuarioComponent,
+    CitaComponent,
+    CitaNuevoComponent,    
   ],
   imports: [
     BrowserModule,

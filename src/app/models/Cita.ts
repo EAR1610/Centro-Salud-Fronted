@@ -3,16 +3,16 @@ export class Cita {
     pacienteId: number;
     medicoId: number;
     especialidadId: number;
-    fecha: string;
-    hora: string;
-    descripcion: string;
+    fechaHora: string;
+    fechaRegistro: string;
+    observaciones: string;
     estado: boolean;
     paciente: {
         id: number;
         nombre: string;
         apellido: string;
     };
-    medico: {
+    doctor: {
         id: number;
         nombre: string;
         apellido: string;
@@ -28,12 +28,12 @@ export class Cita {
         this.pacienteId = pacienteId;
         this.medicoId = medicoId;
         this.especialidadId = especialidadId;
-        this.fecha = fecha;
-        this.hora = hora;
-        this.descripcion = descripcion;
+        this.fechaHora = fecha;
+        this.fechaRegistro = hora;
+        this.observaciones = descripcion;
         this.estado = estado;
         this.paciente = paciente;
-        this.medico = medico;
+        this.doctor = medico;
         this.especialidad = especialidad;
     }
 }
